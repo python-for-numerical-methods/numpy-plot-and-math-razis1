@@ -17,8 +17,11 @@ def normalized_array(data):
     data = np.array(data)
     
     # --- כיתבו את הקוד שלכם כאן ---
-    min_val = np.min(data)
+   min_val = np.min(data)
     max_val = np.max(data)
+
+    if max_val == min_val:
+        return np.zeros_like(data, dtype=float)
 
     normalized = (data - min_val) / (max_val - min_val)
 
